@@ -34,6 +34,8 @@ class DataIngestion:
       os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
 
       df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
+      #not to write the row index as a sepereate col 
+      #and header=true is include the header as the first row
 
       logging.info("Train test split innitiated.")
 
